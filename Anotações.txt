@@ -1,0 +1,45 @@
+***OBS: TODA VEZ QUE FOR RODAR O STREAMLIT, IR EM OPEN FOLDER E ABRIR A PASTA > USAR O COMANDO STREAMLIT RUN E NOME DO ARQUIVO
+
+PASSO 1 - CRIAR UMA PASTA PARA SALVAR OS ARQUIVOS
+
+PASSO 2 ABRIR O VS CODE E IR NA OPÇÃO FILE > OPEN FOLDER > SELCIONAR A PASTA CRIADA
+
+PASSO 3 IR EM 3 PONTINHOS NA PARTE DE MENU SUPERIOR > TERMINAL > NEW TERMINAL
+
+INSTALAÇÃO NO TERMINAL DO VS CODE:
+
+python -m venv venv
+
+venv\Scripts\activate
+
+APARECEU O ERRO DE PERMISSÃO DE EXECUÇÃO DOS SCRIPTS: venv\Scripts\activate : O arquivo C:\Users\Gabri\Desktop\Streamlit\venv\Scripts\Activate.ps1 não pode ser carregado porque a execução de scripts 
+foi desabilitada neste sistema. Para obter mais informações, consulte about_Execution_Policies em https://go.microsoft.com/fwlink/?LinkID=135170.
+
+ABRIR O ABRIR O WINDOWS POWERSHELL E DIGITAR OS COMANDOS ABAIXO:
+
+get-executionpolicy
+
+set-executionpolicy unrestricted
+
+Sim
+
+2 setas para cima e enter > vai aparecer Unrestricted
+
+VOLTAR NO VS CODE E DIGITAR NOVAMENTE OS CÓDIGOS
+
+venv\Scripts\activate
+
+pip install streamlit
+
+APÓS A INSTALAÇÃO CRIAR UM NEW FILE COM O NOME app.py E INSTALAR A BIBLIOTECA E OS COMANDOS DA PÁGINA
+
+import streamlit as st
+
+st.title('Minha Página')
+st.header('Primeira Página')
+
+VOLTAR NO TERMINAL E EXECUTAR O COMANDO PARA RODAR
+
+streamlit run app.py
+
+DEPOIS É SÓ IR ATUALIZANDO NO NAVEGADOR COM O F5
